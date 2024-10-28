@@ -16,7 +16,7 @@ const ChatModal = ({ isOpen, onClose }) => {
           </button>
         </div>
         <div className="mt-4 space-y-4">
-          <p className="text-gray-700">Learn about the terms and privacy measures...</p>
+          <p className="text-gray-700">Learn about the chat support/voice ai support</p>
         </div>
         <div className="mt-6 flex justify-end space-x-3 border-t pt-4">
           <button
