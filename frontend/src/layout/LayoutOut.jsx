@@ -1,5 +1,4 @@
 import styles from "../style";
-// import Header from "../components/Navbar/Header";
 import PropTypes from 'prop-types';
 import Footer from "../components/Navbar/Footer";
 import HeaderOut from "../components/Navbar/HeaderOut";

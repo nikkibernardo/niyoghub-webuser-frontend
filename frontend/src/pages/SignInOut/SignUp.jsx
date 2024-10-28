@@ -11,7 +11,7 @@ const SignUp = () => {
         <h1>SIGN UP</h1>
         <h1>SIGN UP</h1>
 
-        <a href="/" type="submit" className=" w-full px-20 bg-[#537F19] text-white py-2 hover:bg-[#3B5B12] transition duration-200 rounded-tr-lg rounded-bl-lg text-center">
+        <a href="/signin" type="submit" className=" w-full px-20 bg-[#537F19] text-white py-2 hover:bg-[#3B5B12] transition duration-200 rounded-tr-lg rounded-bl-lg text-center">
                   Sign in
         </a> 
 

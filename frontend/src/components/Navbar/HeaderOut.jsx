@@ -13,7 +13,7 @@ function HeaderOut() {
     <>
       <nav className="bg-white border-b border-gray-200 dark:bg-gray-900 fixed w-full z-10 top-0 px-auto">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse pr-15 mr-10">
+          <a href="/signin" className="flex items-center space-x-3 rtl:space-x-reverse pr-15 mr-10">
             <img src={logoImage} className="h-8 ml-0 lg:ml-10 xl:ml-10" alt="NiyogHub Logo" />
             <span className="text-black font-bold self-center text-xl font-semibold whitespace-nowrap dark:text-white ">
               NiyogHub
@@ -22,7 +22,9 @@ function HeaderOut() {
 
           {/* For Spacing */}
           <div className="flex md:order-2 items-end space-x-3 ml-auto">
-            <div className="relative flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"> </div>
+            <div className="relative flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"> 
+              {/* <a href="/signin" className="mr-0 lg:mr-10">Sign in</a> */}
+            </div>
           </div>
 
           <div className="relative flex items-center md:order-3 space-x-3 md:space-x-0 rtl:space-x-reverse">

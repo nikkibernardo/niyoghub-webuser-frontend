@@ -20,7 +20,7 @@ const FAQsOut = () => {
                   <div className="py-4 bg-white">
                     <div className="max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between">
                       <div className="my-container mt-5"> 
-                        <a href="/" className="flex items-center space-x-2">
+                        {/* <a href="/" className="flex items-center space-x-2">
                           <svg
                             className="w-5 h-5 text-black-500 transition"
                             xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,7 @@ const FAQsOut = () => {
                             />
                           </svg>
                           <span className="text-black-500">Go back</span>
-                        </a>
+                        </a> */}
                       </div>
                       <div className="text-center">
                         <p className="text-sm leading-7 text-gray-500 font-regular mt-5">
