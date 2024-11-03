@@ -80,7 +80,6 @@ const ChatScreen = () => {
             </div>
           </header>
 
-          <hr className="border-gray-300 my-2" />
 
           {/* Chat Messages */}
           <div className="flex-1 overflow-y-auto px-4 py-2 max-h-[calc(90vh-180px)]">

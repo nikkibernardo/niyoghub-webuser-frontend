@@ -33,7 +33,7 @@ const SignIn = () => {
             </div>
 
             <div className="bg-[#F1F1F1] w-full max-w-md shadow-lg pt-6 p-8 lg:mr-20 relative overflow-auto" style={{ maxHeight: '90vh' }}> 
-              <h2 className="absolute top-0 left-0 bg-black text-white py-2 px-5 md:px-15 lg:px-20 rounded-br-lg font-bold text-base md:text-lg lg:text-xl">
+              <h2 className="absolute top-0 left-0 bg-black text-white py-3 px-5 md:px-15 lg:px-20 rounded-br-lg font-bold text-base md:text-lg lg:text-xl">
                 Sign in to NiyogHub
               </h2>
               <form className="space-y-4 mt-8">

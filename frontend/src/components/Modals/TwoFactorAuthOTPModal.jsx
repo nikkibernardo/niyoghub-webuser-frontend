@@ -22,10 +22,10 @@ const TwoFactorAuthOTPModal = ({ isOpen, onClose }) => {
 
           By entering the OTP code, you add an extra layer of security to prevent unauthorized access to your personal information and ensure the safety of your online activities. <br /> </p>
         </div>
-        <div className="items-center mt-6 flex justify-end space-x-3 border-t pt-4">
+        <div className=" flex justify-center items-center mt-6 flex justify-end space-x-3 border-t pt-4">
           <button
             onClick={onClose}
-            className="px-4 py-2 bg-[#90B74B] hover:bg-[#3B5B12] text-white rounded-ss"
+            className="px-8 py-2 bg-[#90B74B] hover:bg-[#3B5B12] text-white rounded-ss"
           >
             I understand
           </button>
