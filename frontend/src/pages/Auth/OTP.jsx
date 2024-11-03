@@ -13,27 +13,6 @@ const Otp = () => {
   const toggleModal = () => {
     setIsModalOpen((prev) => !prev);
   };
-  
-  // const otpRefs = Array.from({ length: 6 }, () => useRef(null));
-
-  // const handleOTPChange = (value, index) => {
-  //   const newOtp = [...otp];
-  //   newOtp[index] = value;
-  //   setOtp(newOtp);
-
-  //   if (value.length === 1 && index < otpRefs.length - 1) {
-  //     otpRefs[index + 1].current.focus();
-  //   }
-  //   if (value === "" && index > 0) {
-  //     otpRefs[index - 1].current.focus();
-  //   }
-  // };
-
-  // const handleVerifyOTP = () => {
-  //   const enteredOtp = otp.join("");
-  //   console.log(`OTP Entered: ${enteredOtp}`);
-  //   // Implement verification logic here
-  // };
 
   const handleResendCode = () => {
     console.log("Resending OTP...");
@@ -72,9 +51,9 @@ const Otp = () => {
           }}
         >
           <div className="flex flex-col justify-center items-center w-full h-screen bg-cover bg-center" style={{ backgroundImage: "url('../../../assets/background.png')" }}>
-            <div className="flex flex-col w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
+            <div className="flex flex-col w-full max-w-lg p-6 bg-[#FAFAFA] rounded-lg shadow-lg">
               <div className="flex justify-between items-center mb-6">
-                <h1 className="text-2xl font-bold text-center mb-4">Two-Factor Authentication</h1>
+                <h1 className="text-3xl font-bold text-center mb-4">Two-Factor Authentication</h1>
 
                 <button  className="text-black">
                   <IoInformationCircleOutline
@@ -124,7 +103,6 @@ const Otp = () => {
 
         <TwoFactorAuthOTPModal isOpen={isModalOpen} onClose={toggleModal} />
         </section>
-
       </LayoutOut>
     </>
   );
