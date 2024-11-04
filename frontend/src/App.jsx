@@ -8,7 +8,6 @@ import ChatSupport from './pages/ChatSupport/ChatSupport'
 import Profile from './pages/Profile/Profile';
 import Settings from './pages/Settings/Settings'
 import Feedback from './pages/Feedback/Feedback'
-// import SignUp from './pages/SignInOut/SignUp';
 import SignIn from './pages/SignInOut/SignIn';
 import AboutOut from './pages/About/AboutOut';
 import FAQsOut from './pages/FAQs/FAQsOut';
@@ -19,6 +18,8 @@ import Otp from './pages/Auth/OTP';
 import AllNewsPrograms from './pages/Home/ViewAllNewsPrograms';
 import CopraPrice from './pages/Home/CopraPrice';
 import CoconutIntercropping from './pages/Home/CoconutIntercropping';
+import DiseaseDiagnosedResult from './pages/DiseaseIdentification/DiseaseDiagnosedResult';
+import PageTitle from './components/PageTitle';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
           index
           element={
             <>
-              {/* <PageTitle title="Signin | NiyogHub" /> */}
+              <PageTitle title="Home | NiyogHub" />
               <Home/>
             </>
           }
@@ -37,7 +38,7 @@ function App() {
           path="/about"
           element={
             <>
-              {/* <PageTitle title="Dashboard | NiyogHub" /> */}
+              <PageTitle title="About | NiyogHub" />
               <About />
             </>
           }
@@ -46,7 +47,7 @@ function App() {
           path="/faqs"
           element={
             <>
-              {/* <PageTitle title="Dashboard | NiyogHub" /> */}
+              <PageTitle title="FAQs | NiyogHub" />
               <FAQs />
             </>
           }
@@ -55,16 +56,25 @@ function App() {
           path="/disease-identification"
           element={
             <>
-              {/* <PageTitle title="Dashboard | NiyogHub" /> */}
+              <PageTitle title="Disease Identification | NiyogHub" />
               <DiseaseIdentification/>
             </>
           }
         /> 
         <Route
+          path="/disease-diagnosed-result"
+          element={
+            <>
+              <PageTitle title="Diagnosed Result | NiyogHub" />
+              <DiseaseDiagnosedResult/>
+            </>
+          }
+        />
+        <Route
           path="/soil-profile"
           element={
             <>
-              {/* <PageTitle title="Dashboard | NiyogHub" /> */}
+              <PageTitle title="Soil Profile | NiyogHub" />
               <SoilProfile/>
             </>
           }
@@ -73,7 +83,7 @@ function App() {
           path="/chat-support"
           element={
             <>
-              {/* <PageTitle title="Dashboard | NiyogHub" /> */}
+              <PageTitle title="Chat Support | NiyogHub" />
               <ChatSupport/>
             </>
           }
@@ -82,7 +92,7 @@ function App() {
           path="/profile"
           element={
             <>
-              {/* <PageTitle title="Dashboard | NiyogHub" /> */}
+              <PageTitle title="Profile | NiyogHub" />
               <Profile/>
             </>
           }
@@ -91,7 +101,7 @@ function App() {
           path="/settings"
           element={
             <>
-              {/* <PageTitle title="Dashboard | NiyogHub" /> */}
+              <PageTitle title="Settings | NiyogHub" />
               <Settings/>
             </>
           }
@@ -100,7 +110,7 @@ function App() {
           path="/feedback"
           element={
             <>
-              {/* <PageTitle title="Dashboard | NiyogHub" /> */}
+              <PageTitle title="Feedback | NiyogHub" />
               <Feedback/>
             </>
           }
@@ -109,7 +119,7 @@ function App() {
           path="/signin"
           element={
             <>
-              {/* <PageTitle title="Dashboard | NiyogHub" /> */}
+              <PageTitle title="Sign In | NiyogHub" />
               <SignIn/>
             </>
           }
@@ -118,7 +128,7 @@ function App() {
           path="/signup"
           element={
             <>
-              {/* <PageTitle title="Dashboard | NiyogHub" /> */}
+              <PageTitle title="Sign Up | NiyogHub" />
               <SignUp/>
             </>
           }
@@ -127,7 +137,7 @@ function App() {
           path="/forgot-password"
           element={
             <>
-              {/* <PageTitle title="Dashboard | NiyogHub" /> */}
+              <PageTitle title="Forgot Password | NiyogHub" />
               <ForgotPassword/>
             </>
           }
@@ -136,7 +146,7 @@ function App() {
           path="/reset-password"
           element={
             <>
-              {/* <PageTitle title="Dashboard | NiyogHub" /> */}
+              <PageTitle title="Reset Password | NiyogHub" />
               <ResetPassword/>
             </>
           }
@@ -145,7 +155,7 @@ function App() {
           path="/otp"
           element={
             <>
-              {/* <PageTitle title="Dashboard | NiyogHub" /> */}
+              <PageTitle title="Authentication | NiyogHub" />
               <Otp/>
             </>
           }
@@ -154,7 +164,7 @@ function App() {
           path="/all-news-programs"
           element={
             <>
-              {/* <PageTitle title="Dashboard | NiyogHub" /> */}
+              <PageTitle title="All News & Programs | NiyogHub" />
               <AllNewsPrograms/>
             </>
           }
@@ -163,7 +173,7 @@ function App() {
           path="/copra-price"
           element={
             <>
-              {/* <PageTitle title="Dashboard | NiyogHub" /> */}
+              <PageTitle title="Copra Price Update | NiyogHub" />
               <CopraPrice/>
             </>
           }
@@ -172,7 +182,7 @@ function App() {
           path="/coconut-intercropping"
           element={
             <>
-              {/* <PageTitle title="Dashboard | NiyogHub" /> */}
+              <PageTitle title="Coconut Intercropping | NiyogHub" />
               <CoconutIntercropping/>
             </>
           }
@@ -190,7 +200,7 @@ function App() {
           path="/about-out"
           element={
             <>
-              {/* <PageTitle title="Dashboard | NiyogHub" /> */}
+              <PageTitle title="About | NiyogHub" />
               <AboutOut/>
             </>
           }
@@ -199,7 +209,7 @@ function App() {
           path="/faqs-out"
           element={
             <>
-              {/* <PageTitle title="Dashboard | NiyogHub" /> */}
+              <PageTitle title="FAQs | NiyogHub" />
               <FAQsOut/>
             </>
           }

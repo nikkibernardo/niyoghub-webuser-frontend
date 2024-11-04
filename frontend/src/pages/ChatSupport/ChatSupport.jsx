@@ -63,7 +63,7 @@ const ChatScreen = () => {
   return (
     <Layout>
       <div className="flex flex-col lg:px-20">
-        <div className="outline-none outline outline-[2px] outline-gray-300 outline-t-1 outline-offset-[-1px] p-3 rounded-sm flex flex-col flex-grow  max-h-[calc(100vh-180px)]">
+        <div className="outline-none outline outline-[2px] outline-gray-300 outline-t-1 outline-offset-[-1px] p-3 rounded-sm flex flex-col flex-grow max-h-[calc(100vh-180px)]"> 
           <header className="flex justify-between items-center p-4 bg-white shadow-md">
             <h1 className="text-xl font-bold text-[#537F19]">Chat with PCA</h1>
             <div className="flex items-center space-x-4">
@@ -79,7 +79,6 @@ const ChatScreen = () => {
               />
             </div>
           </header>
-
 
           {/* Chat Messages */}
           <div className="flex-1 overflow-y-auto px-4 py-2 max-h-[calc(90vh-180px)]">
@@ -108,7 +107,6 @@ const ChatScreen = () => {
               </div>
             )}
           </div>
-
 
           <hr className="border-gray-300 my-2" />
 
