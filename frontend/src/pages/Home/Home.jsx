@@ -7,6 +7,7 @@ import Sdg from "./SDG";
 import Announcement from "./Announcement";
 import NewsPrograms from "./NewsPrograms";
 import More from "./More";
+import FooterFull from "../../components/Navbar/FooterFull";
 
 const Home = () => {
 
@@ -28,7 +29,7 @@ const Home = () => {
           </div>
         </div>
 
-
+        <FooterFull/>
 
       </div>
     </>
