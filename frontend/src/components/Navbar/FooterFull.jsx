@@ -49,19 +49,19 @@ function FooterFull() {
               </a>
 
                 <div className="flex flex-end">
-                  <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 mr-5 items-start">
+                  <ul className="flex flex-row font-medium md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 mr-5 items-start">
                     <li>
-                      <a href="/" className="block py-2 px-3 text-white bg-[#537F19] rounded md:bg-transparent md:text-[#537F19] md:p-0" aria-current="page">Home</a>
+                      <a href="/" className="block py-2 px-3 rounded text-black hover:text-[#537F19] hover:underline" aria-current="page">Home</a>
                     </li>
                     <li>
-                      <a href="/about" className="block py-2 px-3 text-gray-900 rounded hover:bg-[#537F19] hover:text-white md:hover:bg-transparent md:hover:text-[#537F19] md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white">About</a>
+                      <a href="/about" className="block py-2 px-3 rounded text-black hover:text-[#537F19] hover:underline">About</a>
                     </li>
 
                     <li className={`relative hidden md:block`}>
                       <a
                         type="button"
                         onClick={toggleResourcesDropdown}
-                        className="flex items-center block text-gray-900 rounded hover:text-[#537F19]"
+                        className="flex items-center block rounded block py-2 px-3 rounded text-black hover:text-[#537F19] hover:underline"
                       >
                         <span className="mr-2">Resources</span>
                         <svg
@@ -99,7 +99,7 @@ function FooterFull() {
                     <li className={`relative md:hidden`}>
                       <button
                         type="button"
-                        className="flex justify-between w-full px-4 py-2 text-gray-900 rounded hover:bg-[#537F19] hover:text-white md:hover:bg-transparent md:hover:text-[#537F19] md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white"
+                        className="flex justify-between w-full px-4 py-2 rounded block py-2 px-3 rounded text-black hover:text-[#537F19] hover:underline"
                         onClick={toggleNestedDropdown}
                       >
                         Resources
@@ -127,21 +127,21 @@ function FooterFull() {
                           <div className="py-1" role="menu" aria-orientation="vertical">
                             <a
                               href="/disease-identification"
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#537F19] hover:text-white"
+                              className="block px-4 py-2 text-sm block py-2 px-3 rounded text-black hover:text-[#537F19] hover:underline"
                               role="menuitem"
                             >
                               Disease Identification
                             </a>
                             <a
                               href="/soil-profile"
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#537F19] hover:text-white"
+                              className="block px-4 py-2 text-sm block py-2 px-3 rounded text-black hover:text-[#537F19] hover:underline"
                               role="menuitem"
                             >
                               Soil Profile
                             </a>
                             <a
                               href="/chat-support"
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#537F19] hover:text-white"
+                              className="block px-4 py-2 text-sm block py-2 px-3 rounded text-black hover:text-[#537F19] hover:underline"
                               role="menuitem"
                             >
                               Chat Support
@@ -152,7 +152,7 @@ function FooterFull() {
                     </li>
 
                     <li>
-                      <a href="/faqs" className="block py-2 px-3 text-gray-900 rounded hover:bg-[#537F19] hover:text-white md:hover:bg-transparent md:hover:text-[#537F19] md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white">FAQs</a>
+                      <a href="/faqs" className="block py-2 px-3 rounded block py-2 px-3 rounded text-black hover:text-[#537F19] hover:underline">FAQs</a>
                     </li>
                   </ul>
                 </div>
@@ -180,7 +180,7 @@ function FooterFull() {
             </div>
 
             {/* Affiliates Section */}
-            <div className="col-span-1">
+            <div className="col-span-1 ml-0 xl:ml-10 lg:ml-10">
               <h4 className="font-bold text-lg mb-2">Affiliates</h4>
               <ul className="space-y-1 text-sm">
                 <li><a href="#" className="hover:text-gray-600">Link 1</a></li>

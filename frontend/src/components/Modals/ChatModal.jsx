@@ -8,7 +8,7 @@ const ChatModal = ({ isOpen, onClose }) => {
       <div className="relative w-full max-w-2xl bg-white rounded-lg shadow-lg p-6 mx-10">
         <div className="flex justify-between items-center border-b pb-4">
           <div className="flex flex-col">
-            <h2 className="text-xl font-semibold text-gray-800">HOW TO USE EAL-TIME CHAT SUPPORT?</h2>
+            <h2 className="text-xl font-semibold text-gray-800">HOW TO USE REAL-TIME CHAT SUPPORT?</h2>
             <h5 className="text-l text-gray-600">Last Updated October 2024</h5>
           </div>
           <button onClick={onClose} className="text-black-500 hover:text-black-700">
