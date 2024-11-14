@@ -1,4 +1,5 @@
 import styles from "../../style";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const GetStarted = () => {
 
@@ -27,16 +28,18 @@ const GetStarted = () => {
           <div className="flex flex-col md:flex-row md:space-x-4">
             <button 
               type="button" 
-              className="relative py-2 px-4 md:py-2 md:px-6 text-[14px] md:text-[16px] text-white bg-[#537F19] rounded-tr-[10px] rounded-bl-[10px] outline-none outline outline-[2px] outline-black outline-t-.5 outline-offset-[-.5px] shadow-[5px_5px_0px_0px_#000000] hover:shadow-[0px_0px_0px_0px_#000000] transition-all duration-300 mb-3"
+              className="relative py-2 px-4 md:py-2 md:px-6 text-[14px] md:text-[16px] text-white bg-[#537F19] rounded-tr-[10px] rounded-bl-[10px] outline-none outline outline-[2px] outline-black outline-t-.5 outline-offset-[-.5px] shadow-[5px_5px_0px_0px_#000000] hover:shadow-[0px_0px_0px_0px_#000000] transition-all duration-300 mb-3 flex items-center"
             >
-              Get Started →
+              <span className="mr-2 font-semibold">Get Started </span>
+              <FaArrowRightLong />
             </button>
 
             <button 
               type="button" 
-              className="relative py-2 px-4 md:py-2 md:px-6 text-[14px] md:text-[16px] text-black bg-white border-[2px] border-black rounded-tr-[10px] rounded-bl-[10px] outline-none shadow-[5px_5px_0px_0px_#000000] hover:shadow-[0px_0px_0px_0px_#000000] transition-all duration-300 mb-3"
+              className="relative py-2 px-4 md:py-2 md:px-6 text-[14px] md:text-[16px] text-black bg-white border-[2px] border-black rounded-tr-[10px] rounded-bl-[10px] outline-none shadow-[5px_5px_0px_0px_#000000] hover:shadow-[0px_0px_0px_0px_#000000] transition-all duration-300 mb-3 flex items-center"
             >
-              Learn More →
+              <span className="mr-2 font-semibold">Get Started </span>
+              <FaArrowRightLong />
             </button>
           </div>
 

@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import logoImage from "../../assets/black.png";
 import userImage from "../../assets/farmer.png";
+import { IoMenu } from "react-icons/io5";
+import { IoIosArrowDown, IoMdNotifications, IoMdSearch } from "react-icons/io";
+import {} from "react-icons/io";
 
 function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); 
@@ -118,21 +121,7 @@ function Header() {
                 {/* Search input for desktop */}
                 <div className="relative hidden md:block">
                   <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                    <svg
-                      className="w-4 h-4 text-gray-500 dark:text-gray-400"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                      />
-                    </svg>
+                    <IoMdSearch size={22} className="text-gray-500"/>
                     <span className="sr-only">Search icon</span>
                   </div>
                   <input
@@ -151,16 +140,8 @@ function Header() {
                     className="relative inline-flex items-center text-sm font-medium text-center text-gray-500 hover:text-gray-900 focus:outline-none dark:hover:text-white dark:text-gray-400"
                     type="button"
                   >
-                    <svg
-                      className="w-5 h-5"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 14 20"
-                    >
-                      <path d="M12.133 10.632v-1.8A5.406 5.406 0 0 0 7.979 3.57.946.946 0 0 0 8 3.464V1.1a1 1 0 0 0-2 0v2.364a.946.946 0 0 0 .021.106 5.406 5.406 0 0 0-4.154 5.262v1.8C1.867 13.018 0 13.614 0 14.807 0 15.4 0 16 .538 16h12.924C14 16 14 15.4 14 14.807c0-1.193-1.867-1.789-1.867-4.175ZM3.823 17a3.453 3.453 0 0 0 6.354 0H3.823Z" />
-                    </svg>
-                    <div className="absolute block w-3 h-3 bg-red-500 border-2 border-white rounded-full -top-0.5 start-2.5 dark:border-gray-900"></div>
+                    <IoMdNotifications size={24} className="mt-2 text-gray-600"/>
+                    <div className="absolute block w-3 h-3 bg-red-500 border-2 border-white rounded-full -top-0.5 start-2.5 dark:border-gray-900 mt-2"></div>
                   </button> 
 
                   {isNotificationDropdownOpen && (
@@ -212,21 +193,7 @@ function Header() {
                 >
                   <img src={userImage} className="h-6 w-6 rounded-full object-cover" alt="Flowbite Logo" />
                   <span className="mr-2 whitespace-nowrap dark:text-white hidden md:block">NiyogHub User</span>
-                  <svg
-                    className="ml-1 fill-current   mr-0 lg:mr-10 xl:mr-10"
-                    width="12"
-                    height="8"
-                    viewBox="0 0 12 8"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M0.410765 0.910734C0.736202 0.585297 1.26384 0.585297 1.58928 0.910734L6.00002 5.32148L10.4108 0.910734C10.7362 0.585297 11.2638 0.585297 11.5893 0.910734C11.9147 1.23617 11.9147 1.76381 11.5893 2.08924L6.58928 7.08924C6.26384 7.41468 5.7362 7.41468 5.41077 7.08924L0.410765 2.08924C0.0853277 1.76381 0.0853277 1.23617 0.410765 0.910734Z"
-                      fill=""
-                    />
-                  </svg>
+                  <IoIosArrowDown size={18} className="mr-0 lg:mr-10 xl:mr-10"/>
                 </a>
      
                 {/* User Dropdown */}
@@ -265,21 +232,7 @@ function Header() {
                 aria-expanded={isMenuOpen}
               >
                 <span className="sr-only">Open main menu</span>
-                <svg
-                  className="w-5 h-5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 17 14"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M1 1h15M1 7h15M1 13h15"
-                  />
-                </svg>
+                <IoMenu size={35}/>
               </button>
             </div>
           </div>
@@ -303,21 +256,7 @@ function Header() {
                   className="flex items-center block text-gray-900 rounded hover:text-[#537F19]"
                 >
                   <span className="mr-2">Resources</span>
-                  <svg
-                    className="ml-1 fill-current"
-                    width="12"
-                    height="8"
-                    viewBox="0 0 12 8"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M0.410765 0.910734C0.736202 0.585297 1.26384 0.585297 1.58928 0.910734L6.00002 5.32148L10.4108 0.910734C10.7362 0.585297 11.2638 0.585297 11.5893 0.910734C11.9147 1.23617 11.9147 1.76381 11.5893 2.08924L6.58928 7.08924C6.26384 7.41468 5.7362 7.41468 5.41077 7.08924L0.410765 2.08924C0.0853277 1.76381 0.0853277 1.23617 0.410765 0.910734Z"
-                      fill=""
-                    />
-                  </svg>
+                  <IoIosArrowDown size={18}/>
                 </a>
 
                 {isResourcesDropdownOpen && (
@@ -342,23 +281,7 @@ function Header() {
                   onClick={toggleNestedDropdown}
                 >
                   Resources
-                  <svg
-                    className="mt-1.5 -mr-1 h-6 w-5  fill-current"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M0.410765 0.910734C0.736202 0.585297 1.26384 0.585297 1.58928 0.910734L6.00002 5.32148L10.4108 0.910734C10.7362 0.585297 11.2638 0.585297 11.5893 0.910734C11.9147 1.23617 11.9147 1.76381 11.5893 2.08924L6.58928 7.08924C6.26384 7.41468 5.7362 7.41468 5.41077 7.08924L0.410765 2.08924C0.0853277 1.76381 0.0853277 1.23617 0.410765 0.910734Z"
-                      fill=""
-                    />
-                  </svg>
+                  <IoIosArrowDown size={18}/>
                 </button>
 
                 {isNestedDropdownOpen && (

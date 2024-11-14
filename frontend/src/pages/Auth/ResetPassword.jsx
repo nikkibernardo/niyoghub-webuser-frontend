@@ -4,14 +4,13 @@ const ResetPassword = () => {
   return (
     <>
       <LayoutOut>
-      <section
-          id="sign-in"
-          className={`flex md:flex-col flex-col`} 
+        <section
+          className="flex flex-col h-screen p-0 items-center"
           style={{ 
-            backgroundImage: "url('src/assets/bck-opac.png')", 
-            backgroundSize: 'auto 70%',
-            backgroundPosition: 'right bottom', 
-            backgroundRepeat: 'no-repeat'
+              backgroundImage: "url('src/assets/bck-opac.png')", 
+              backgroundSize: 'auto 70%',
+              backgroundPosition: 'right bottom', 
+              backgroundRepeat: 'no-repeat'
           }}
         >
           <div className="flex flex-col justify-center items-center w-full h-screen bg-cover bg-center" style={{ backgroundImage: "url('../../../assets/background.png')" }}>

@@ -29,17 +29,3 @@ export default {
   plugins: [],
 };
 
-
-// /** @type {import('tailwindcss').Config} */
-// export default {
-//   mode: 'jit',
-//   content: [
-//     "./src/**/*.{js,jsx,ts,tsx}", // Adjust the path based on your project structure
-//     "./public/index.html",
-//   ],
-//   theme: {
-//     extend: {},
-//   },
-//   plugins: [],
-// }
-
