@@ -1,5 +1,5 @@
 
-import LayoutOut from "../../layout/LayoutOut";
+import LayoutRegisterOut from "../../layout/LayoutRegisterOut";
 import styles from "../../style";
 import logo from "../../assets/black.png";
 import enya from "../../assets/enya.png";
@@ -11,7 +11,7 @@ const AboutOut = () => {
 
   return (
     <>
-      <LayoutOut>
+      <LayoutRegisterOut>
         <div className="relative flex-1 overflow-y-auto overflow-hidden ">
           <div className={`bg-primary ${styles.flexStart}`}>
             <div className={`${styles.boxWidth}`}>
@@ -64,7 +64,7 @@ const AboutOut = () => {
             </div>
           </div>
         </div>
-      </LayoutOut>
+      </LayoutRegisterOut>
     </>
   );
 };

@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import logoImage from "../../assets/black.png";
 import userImage from "../../assets/farmer.png";
-import { IoMenu } from "react-icons/io5";
 import { IoIosArrowDown, IoMdNotifications, IoMdSearch } from "react-icons/io";
-import {} from "react-icons/io";
+import { FaUser } from "react-icons/fa";
+import { IoMenu, IoSettingsSharp, IoChatboxEllipses, } from "react-icons/io5";
+import { MdFeedback } from "react-icons/md";
+import { BiSolidLogOut } from "react-icons/bi";
 
 function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); 
@@ -65,8 +67,6 @@ function Header() {
       document.removeEventListener("mousedown", handleClickOutsideUser); 
     };
   }, []);
-
-
   
   // Function to toggle the main menu and its nested dropdown for resources
   const toggleMenu = () => {
@@ -100,21 +100,7 @@ function Header() {
                   aria-expanded="false"
                   className="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1 relative hidden md:block"
                 >
-                  <svg
-                    className="w-5 h-5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                    />
-                  </svg>
+                  <IoMdSearch size={22} className="text-gray-500"/>
                   <span className="sr-only">Search</span>
                 </button>
                 
@@ -205,20 +191,30 @@ function Header() {
                     </div>
                     <ul className="py-2">
                       <li>
-                        <a href="/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Profile</a>
+                        <a href="/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white flex flex-row">
+                          <FaUser size={16} className="mr-2"/> Profile
+                        </a>
                       </li>
                       <li>
-                        <a href="/settings" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+                        <a href="/settings" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white flex flex-row">
+                          <IoSettingsSharp size={16} className="mr-2"/>Settings
+                        </a>
                       </li>
                       <li>
-                        <a href="/chat-support" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Chat Support</a>
+                        <a href="/chat-support" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white flex flex-row">
+                          <IoChatboxEllipses size={16} className="mr-2"/> Chat Support
+                        </a>
                       </li>
                       <li>
-                        <a href="/feedback" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Feedback</a>
+                        <a href="/feedback" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white flex flex-row">
+                          <MdFeedback size={16} className="mr-2" />Feedback
+                      </a>
                       </li>
                       <hr />
                       <li>
-                        <a href="/signin" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Logout</a>
+                        <a href="/signin" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white flex flex-row">
+                          <BiSolidLogOut size={16} className="mr-2"/> Logout
+                      </a>
                       </li>
                     </ul>
                   </div>
@@ -326,3 +322,5 @@ function Header() {
 }
 
 export default Header;
+
+

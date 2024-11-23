@@ -1,5 +1,4 @@
-
-import LayoutOut from "../../layout/LayoutOut";
+import LayoutRegisterOut from "../../layout/LayoutRegisterOut";
 import styles from "../../style";
 import { useState } from 'react';
 
@@ -12,7 +11,7 @@ const FAQsOut = () => {
 
   return (
     <>
-      <LayoutOut>
+      <LayoutRegisterOut>
         <div className="relative flex-1 overflow-y-auto overflow-hidden ">    
             <div className={`bg-primary ${styles.flexStart}`}>
               <div className={`${styles.boxWidth}`}>
@@ -20,22 +19,6 @@ const FAQsOut = () => {
                   <div className="py-4 bg-white">
                     <div className="max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between">
                       <div className="my-container mt-5"> 
-                        {/* <a href="/" className="flex items-center space-x-2">
-                          <svg
-                            className="w-5 h-5 text-black-500 transition"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M15.354 1.646a.5.5 0 0 1 0 .708L9.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
-                            />
-                          </svg>
-                          <span className="text-black-500">Go back</span>
-                        </a> */}
                       </div>
                       <div className="text-center">
                         <p className="text-sm leading-7 text-gray-500 font-regular mt-5">
@@ -132,7 +115,7 @@ const FAQsOut = () => {
               </div>
             </div>
           </div>
-      </LayoutOut>
+      </LayoutRegisterOut>
     </>
   );
 };

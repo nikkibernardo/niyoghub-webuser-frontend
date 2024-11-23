@@ -1,6 +1,13 @@
 import LayoutOut from "../../layout/LayoutOut";
+import { useNavigate } from "react-router-dom";
 
 const ResetPassword = () => {
+  const navigate = useNavigate();
+
+  const handleChangePassword = () => {
+    navigate('/otp'); 
+  };
+
   return (
     <>
       <LayoutOut>
@@ -50,9 +57,12 @@ const ResetPassword = () => {
                 />
               </div>
 
-              <div className="text-center mt-6 text-gray-600 py-2 px-10 bg-[#537F19]">  
-                  <a href="/otp" className=" text-white">Change password</a>
-              </div>
+              <button
+                onClick={handleChangePassword}
+                className="text-center mt-6 text-gray-600 py-2 px-10 bg-[#537F19] text-white rounded hover:bg-[#456b15] transition-all"
+              >
+                Change Password
+              </button>
 
               <div className="flex justify-center mb-2">
                 <div className="text-center my-4 text-gray-600">

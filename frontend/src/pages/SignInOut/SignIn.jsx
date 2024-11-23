@@ -1,8 +1,15 @@
 import LayoutOut from "../../layout/LayoutOut";
 import { IoLogoGoogle } from 'react-icons/io5';
 import logo from "../../assets/black.png"
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
+  const navigate = useNavigate();
+
+  const handleSignIn = () => {
+    navigate('/'); 
+  };
+
   return (
     <>
       <LayoutOut>
@@ -67,11 +74,13 @@ const SignIn = () => {
                   <a href="/forgot-password" className="text-sm text-gray-700 hover:underline mb-5">Forgot password?</a>
                 </div>
 
-                <div className="w-full px-4 md:px-8 lg:px-12 xl:px-20 bg-[#537F19] text-white py-2 hover:bg-[#3B5B12] transition duration-200 rounded-tr-lg rounded-bl-lg text-center">
-                  <a href="/" type="submit">
-                    Sign in
-                  </a> 
-                </div>
+                <button
+                  onClick={handleSignIn}
+                  type="submit"
+                  className="w-full px-4 md:px-8 lg:px-12 xl:px-20 bg-[#537F19] text-white py-2 hover:bg-[#3B5B12] transition duration-200 rounded-tr-lg rounded-bl-lg text-center"
+                >
+                  Sign in
+                </button>
               </form>
 
               <div className="text-center mt-4 text-gray-600">

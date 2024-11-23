@@ -1,12 +1,20 @@
 import LayoutOut from "../../layout/LayoutOut";
 import TermsPolicyModal from "../../components/Modals/TermsPolicyModal";
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+  const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   const toggleModal = () => {
     setIsModalOpen((prev) => !prev);
   };
+
+  const handleSignUp = () => {
+    navigate('/signin'); 
+  };
+
   return (
     <>
       <LayoutOut>
@@ -26,7 +34,6 @@ const SignUp = () => {
                 Create an account
               </h2>
               <form className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5">
-                {/* First Name */}
                 <div className="flex flex-col mt-12">
                   <label className="text-sm font-medium text-gray-700">
                     First Name <span className="text-red-500">*</span>
@@ -38,7 +45,6 @@ const SignUp = () => {
                 />
               </div>
 
-              {/* Password */}
               <div className="flex flex-col lg:mt-12 md:mt-12">
                 <label className="text-sm font-medium text-gray-700">
                   Password <span className="text-red-500">*</span>
@@ -50,7 +56,6 @@ const SignUp = () => {
                 />
               </div>
 
-              {/* Last Name */}
               <div className="flex flex-col">
                 <label className="text-sm font-medium text-gray-700">
                   Last Name <span className="text-red-500">*</span>
@@ -62,7 +67,6 @@ const SignUp = () => {
                 />
               </div>
 
-              {/* Confirm Password */}
               <div className="flex flex-col">
                 <label className="text-sm font-medium text-gray-700">
                   Confirm Password <span className="text-red-500">*</span>
@@ -74,7 +78,6 @@ const SignUp = () => {
                 />
               </div>
 
-              {/* Email Address */}
               <div className="flex flex-col">
                 <label className="text-sm font-medium text-gray-700">
                   Email Address <span className="text-red-500">*</span>
@@ -86,7 +89,6 @@ const SignUp = () => {
                 />
               </div>
 
-              {/* City / Municipality */}
               <div className="flex flex-col">
                 <label className="text-sm font-medium text-gray-700">
                   City / Municipality <span className="text-red-500">*</span>
@@ -136,7 +138,6 @@ const SignUp = () => {
                 </select>
               </div>
 
-              {/* Phone Number */}
               <div className="flex flex-col">
                 <label className="text-sm font-medium text-gray-700">
                   Phone Number <span className="text-red-500">*</span>
@@ -148,7 +149,6 @@ const SignUp = () => {
                 />
               </div>
 
-              {/* Language */}
               <div className="flex flex-col">
                 <label className="text-sm font-medium text-black-700">
                   Language <span className="text-red-500">*</span>
@@ -160,7 +160,6 @@ const SignUp = () => {
                 </select>
               </div>
 
-              {/* Terms and Conditions */}
               <div className="col-span-1 md:col-span-2 flex items-start mt-6">
                 <input type="checkbox" className="mr-2 mt-1" />
                 <p className="text-sm text-gray-700">
@@ -172,14 +171,14 @@ const SignUp = () => {
                 </p>
               </div>
 
-              {/* Sign Up Button */}
-              <div className="col-span-1 md:col-span-2 w-full px-4 md:px-8 lg:px-12 xl:px-20 bg-[#537F19] text-white py-2 hover:bg-[#3B5B12] transition duration-200 rounded-tr-lg rounded-bl-lg text-center mt-15">
-                <a href="/signin" type="submit" className=" w-full px-20 bg-[#537F19] text-white py-2 hover:bg-[#3B5B12] transition duration-200 rounded-tr-lg rounded-bl-lg text-center">
-                  Sign up
-                </a> 
-              </div>
+              <button
+                onClick={handleSignUp}
+                type="submit"
+                className="col-span-1 md:col-span-2 w-full px-4 md:px-8 lg:px-12 xl:px-20 bg-[#537F19] text-white py-2 hover:bg-[#3B5B12] transition duration-200 rounded-tr-lg rounded-bl-lg text-center mt-15"
+              >
+                Sign up
+              </button>
 
-              {/* Sign In Link */}
               <div className="col-span-1 md:col-span-2 text-center">
                 <p className="text-sm text-gray-700">
                   Already have an account?{' '}
