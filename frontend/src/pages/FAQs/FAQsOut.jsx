@@ -9,6 +9,8 @@ const FAQsOut = () => {
     setOpenFAQ(openFAQ === index ? null : index); 
   };
 
+
+
   return (
     <>
       <LayoutRegisterOut>

@@ -4,14 +4,29 @@ import enya from "../../assets/enya.png";
 import eli from "../../assets/eli.png";
 import nikki from "../../assets/nikki.png";
 import Layout from "../../layout/Layout";
+import { useNavigate } from 'react-router-dom';
+import { IoChevronBack } from 'react-icons/io5'; 
 
 const About = () => {
+  const navigate = useNavigate();
+
+  const goBack = () => {
+    navigate(-1); 
+  };
+
   return (
     <>
       <Layout>
         <div className="relative flex-1 overflow-y-auto overflow-hidden ">
           <div className={`bg-primary ${styles.flexStart}`}>
             <div className={`${styles.boxWidth}`}>
+
+              <button
+                onClick={goBack}
+                className="mx-5 flex items-start justify-start bg-transparent border-none cursor-pointer hover:underline rounded-md"
+              >
+                <IoChevronBack size={24} color="black" /> Go Back
+              </button>
             
               <div className="my-10 mx-5 xl:mx-20 lg:mx-20 md:mx-10 sm:mx-10 ss:mx-10 xs:mx-10 flex flex-col items-center outline-none outline outline-[2px] outline-black outline-t-1 outline-offset-[-1px]">
                 <div className="w-full flex flex-col items-center lg:px-10  xl:px-0 ml-0 lg:ml-5 mt-10">

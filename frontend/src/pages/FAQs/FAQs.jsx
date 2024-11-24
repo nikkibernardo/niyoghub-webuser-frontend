@@ -1,13 +1,19 @@
-
+import { useNavigate } from 'react-router-dom';
 import Layout from "../../layout/Layout";
 import styles from "../../style";
 import { useState } from 'react';
+import { IoChevronBack } from 'react-icons/io5'; 
 
 const FAQs = () => {
+  const navigate = useNavigate();
   const [openFAQ, setOpenFAQ] = useState(null); 
 
   const toggleFAQ = (index) => {
     setOpenFAQ(openFAQ === index ? null : index); 
+  };
+
+  const goBack = () => {
+    navigate(-1); 
   };
 
   return (
@@ -20,22 +26,12 @@ const FAQs = () => {
                 <div className="py-4 bg-white">
                   <div className="max-w-screen-md mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between">
                     <div className="my-container mt-5"> 
-                      <a href="/" className="flex items-center space-x-2">
-                        <svg
-                          className="w-5 h-5 text-black-500 transition"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M15.354 1.646a.5.5 0 0 1 0 .708L9.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
-                          />
-                        </svg>
-                        <span className="text-black-500">Go back</span>
-                      </a>
+                      <button
+                        onClick={goBack}
+                        className="flex items-start justify-start bg-transparent border-none cursor-pointer hover:underline rounded-md"
+                      >
+                        <IoChevronBack size={24} color="black" /> Go Back
+                      </button>
                     </div>
                     <div className="text-center">
                       <p className="text-sm leading-7 text-gray-500 font-regular mt-5">
