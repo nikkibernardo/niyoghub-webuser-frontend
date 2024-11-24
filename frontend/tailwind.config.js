@@ -1,6 +1,6 @@
-// const mtConfig = require("@material-tailwind/react").mtConfig;
 
 /** @type {import('tailwindcss').Config} */
+// /** @type {import lineClamp from '@tailwindcss/line-clamp'} */
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   mode: "jit",
@@ -26,6 +26,7 @@ export default {
       xl: "1700px",
     },
   },
-  plugins: [],
+  plugins: [
+  ],
 };
 

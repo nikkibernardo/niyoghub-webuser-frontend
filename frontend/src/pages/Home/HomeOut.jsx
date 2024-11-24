@@ -1,5 +1,3 @@
-
-import Header from "../../components/Navbar/Header";
 import GetStarted from "./GetStarted";
 import styles from "../../style";
 import Services from "./Services";
@@ -9,6 +7,7 @@ import NewsPrograms from "./NewsPrograms";
 import More from "./More";
 import FooterFull from "../../components/Navbar/FooterFull";
 import Events from "./Events";
+import HeaderRegisterOut from "../../components/Navbar/HeaderRegisterOut";
 
 const Home = () => {
 
@@ -16,7 +15,7 @@ const Home = () => {
     <>
       <div className="relative flex-1 overflow-y-auto overflow-hidden ">
         <div>
-          <Header/>
+          <HeaderRegisterOut />
         </div>
             
         <div className={`bg-primary ${styles.flexStart}`}>

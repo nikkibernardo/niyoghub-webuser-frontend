@@ -20,6 +20,8 @@ import CopraPrice from './pages/Home/CopraPrice';
 import CoconutIntercropping from './pages/Home/CoconutIntercropping';
 import DiseaseDiagnosedResult from './pages/DiseaseIdentification/DiseaseDiagnosedResult';
 import PageTitle from './components/PageTitle';
+import AllEvents from './pages/Home/ViewAllEvents';
+import ReadEvent from './pages/Home/ReadEvent';
 
 function App() {
   return (
@@ -166,6 +168,24 @@ function App() {
             <>
               <PageTitle title="All News & Programs | NiyogHub" />
               <AllNewsPrograms/>
+            </>
+          }
+        />
+        <Route
+          path="/all-events"
+          element={
+            <>
+              <PageTitle title="All Events | NiyogHub" />
+              <AllEvents />
+            </>
+          }
+        />
+        <Route
+          path="/read-event"
+          element={
+            <>
+              <PageTitle title="Read Event | NiyogHub" />
+              <ReadEvent />
             </>
           }
         />
