@@ -17,7 +17,7 @@ const ReadEvent = () => {
 
   return (
     <Layout>
-      <div className="px-4">
+      <div className="">
         <button
           onClick={goBack}
           className="flex items-start justify-start bg-transparent border-none cursor-pointer hover:underline rounded-md"

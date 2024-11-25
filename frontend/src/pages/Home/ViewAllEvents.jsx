@@ -44,7 +44,7 @@ const AllEvents = () => {
 
   return (
     <Layout>
-      <div className="px-4">
+      <div className="">
         <button
           onClick={goBack}
           className="flex items-start justify-start bg-transparent border-none cursor-pointer hover:underline rounded-md"
@@ -87,9 +87,12 @@ const AllEvents = () => {
                 alt={event.title}
                 className="w-40 h-52 object-cover rounded"
               />
-              <div className="flex flex-col">
-                <h3 className="text-lg font-semibold text-black p-2 line-clamp-3">{event.title}</h3>
-                <p className="px-2 line-clamp-4">{event.description}</p>
+              <div className="flex flex-col p-2">
+                <h3 className="text-lg font-semibold text-black line-clamp-2">{event.title}</h3>
+                <p className="text-[#537F19] text-sm mb-2">
+                  {event.category}
+                </p>
+                <p className="line-clamp-4">{event.description}</p>
               </div>
             </div>
           </div>

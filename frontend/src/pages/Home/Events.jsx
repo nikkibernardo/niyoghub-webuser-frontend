@@ -125,7 +125,7 @@ const Events = () => {
             </div>
           </div>
 
-          <div className="text-center text-gray-600 py-2 px-10 bg-[#537F19] mb-2">  
+          <div className="text-center text-gray-600 py-2 px-10 bg-[#537F19] mb-2 hover:bg-[#6E9F33] transition duration-300">  
             <a href="/all-events" className=" text-white">View All Events</a>
           </div>
 

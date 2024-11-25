@@ -22,6 +22,7 @@ import DiseaseDiagnosedResult from './pages/DiseaseIdentification/DiseaseDiagnos
 import PageTitle from './components/PageTitle';
 import AllEvents from './pages/Home/ViewAllEvents';
 import ReadEvent from './pages/Home/ReadEvent';
+import ReadNewsPrograms from './pages/Home/ReadNewsPrograms';
 
 function App() {
   return (
@@ -186,6 +187,15 @@ function App() {
             <>
               <PageTitle title="Read Event | NiyogHub" />
               <ReadEvent />
+            </>
+          }
+        />
+        <Route
+          path="/read-news-programs"
+          element={
+            <>
+              <PageTitle title="Read News & Programs | NiyogHub" />
+              <ReadNewsPrograms />
             </>
           }
         />
