@@ -19,7 +19,7 @@ const MoreOut = () => {
             WHAT'S MORE TO KNOW?
           </h1>
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
-            <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-20 text-center lg:text-left">
+            <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-20 text-center lg:text-left mt-10">
               {/* Coconut Intercropping Card */}
               <a
                 href="/coconut-intercropping-out"

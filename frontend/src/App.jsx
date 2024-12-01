@@ -25,6 +25,7 @@ import ReadEvent from './pages/Home/ReadEvent';
 import ReadNewsPrograms from './pages/Home/ReadNewsPrograms';
 import HomeOut from './pages/Home/HomeOut';
 import CopraPriceOut from './pages/Home/CopraPriceOut';
+import CoconutIntercroppingOut from './pages/Home/CoconutIntercroppingOut';
 
 function App() {
   return (
@@ -237,7 +238,15 @@ function App() {
             </>
           }
         />
-
+        <Route
+          path="/coconut-intercropping-out"
+          element={
+            <>
+              <PageTitle title="Coconut Intercropping | NiyogHub" />
+              <CoconutIntercroppingOut/>
+            </>
+          }
+        />
 
 
 
