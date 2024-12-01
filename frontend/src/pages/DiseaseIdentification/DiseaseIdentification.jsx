@@ -67,9 +67,9 @@ const DiseaseIdentification = () => {
                 <h2 className="text-[#537F19] font-semibold text-lg sm:text-xl md:text-2xl">DISEASE IDENTIFICATION</h2>
                 <IoInformationCircleOutline
                   size={24}
-                  color="white"
                   onClick={toggleModal}
-                  className="bg-gray-700 rounded-xl"
+                  className="cursor-pointer text-gray-700"
+                  // className="bg-gray-700 rounded-xl"
                 />
               </div>
               <hr className="font-semibold"/>
@@ -92,7 +92,7 @@ const DiseaseIdentification = () => {
               <h3 className="text-gray-800 font-semibold text-xl pt-2">Upload Image</h3>
               <div className="flex items-center justify-between w-full mb-2">
                 <p className="text-gray-600">Upload image you want to diagnose</p>
-                <label className="text-[#90B74B] border border-[#90B74B] hover:text-white flex flex-col sm:flex-row items-center justify-center space-y-1 sm:space-y-0 sm:space-x-2 py-1 px-4 rounded-l hover:bg-[#90B74B] transition duration-200">
+                {/* <label className="text-[#90B74B] border border-[#90B74B] hover:text-white flex flex-col sm:flex-row items-center justify-center space-y-1 sm:space-y-0 sm:space-x-2 py-1 px-4 rounded-l hover:bg-[#90B74B] transition duration-200">
                   <IoIosCamera className="text-2xl" />
                   <span>Capture Image</span>
                   <input
@@ -102,7 +102,7 @@ const DiseaseIdentification = () => {
                     onChange={handleCapture}
                     className="hidden" 
                   />
-                </label>
+                </label> */}
               </div>
 
               <div className="flex justify-center items-center w-full border-2 border-dashed border-gray-300 rounded-lg p-6 h-65 md:h-96 lg:h-80 relative">

@@ -1,7 +1,7 @@
 
 import styles from "../../style";
 
-const More = () => {
+const MoreOut = () => {
   return (
     <>
       <section 
@@ -22,7 +22,7 @@ const More = () => {
             <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-20 text-center lg:text-left">
               {/* Coconut Intercropping Card */}
               <a
-                href="/coconut-intercropping"
+                href="/coconut-intercropping-out"
                 className="flex flex-col items-center lg:items-start bg-[#639324] text-black rounded-lg p-6 w-full sm:w-[300px] lg:w-[290px] min-h-[310px] shadow-lg"
               >
                 <div className="mb-4">
@@ -46,7 +46,7 @@ const More = () => {
               </a>
 
               {/* Copra Price Watch Card */}
-              <a href="/copra-price"
+              <a href="/copra-price-out"
                 className="flex flex-col items-center lg:items-start bg-[#D2D792] text-black rounded-lg p-6 w-full sm:w-[300px] lg:w-[290px] min-h-[310px] shadow-lg"
               >
                 <div className="mb-4">
@@ -75,4 +75,4 @@ const More = () => {
   );
 };
 
-export default More;
+export default MoreOut;

@@ -133,9 +133,10 @@ const ChatScreen = () => {
               {/* Dynamic Modal Trigger */}
               <IoInformationCircleOutline
                 size={24}
-                color="white"
+                // color="black"
                 onClick={toggleModal}
-                className="bg-gray-700 rounded-xl"
+                className="cursor-pointer text-gray-700"
+                // className="bg-gray-700 rounded-xl"
               />
             </div>
           </header>

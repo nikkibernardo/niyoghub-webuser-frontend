@@ -23,6 +23,8 @@ import PageTitle from './components/PageTitle';
 import AllEvents from './pages/Home/ViewAllEvents';
 import ReadEvent from './pages/Home/ReadEvent';
 import ReadNewsPrograms from './pages/Home/ReadNewsPrograms';
+import HomeOut from './pages/Home/HomeOut';
+import CopraPriceOut from './pages/Home/CopraPriceOut';
 
 function App() {
   return (
@@ -33,10 +35,19 @@ function App() {
           element={
             <>
               <PageTitle title="Home | NiyogHub" />
-              <Home/>
+              <HomeOut />
             </>
           }
         />
+        <Route
+          path="/home-registered"
+          element={
+            <>
+              <PageTitle title="Home | NiyogHub" />
+              <Home />
+            </>
+          }
+        /> 
         <Route
           path="/about"
           element={
@@ -205,6 +216,15 @@ function App() {
             <>
               <PageTitle title="Copra Price Update | NiyogHub" />
               <CopraPrice/>
+            </>
+          }
+        />
+        <Route
+          path="/copra-price-out"
+          element={
+            <>
+              <PageTitle title="Copra Price Update | NiyogHub" />
+              <CopraPriceOut />
             </>
           }
         />

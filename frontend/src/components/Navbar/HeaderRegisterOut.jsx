@@ -10,6 +10,15 @@ function HeaderRegisterOut() {
   const [isMenuOpen, setIsMenuOpen] = useState(false); 
   const [isResourcesDropdownOpen, setIsResourcesDropdownOpen] = useState(false); 
   const [isNestedDropdownOpen, setNestedDropdownOpen] = useState(false);
+
+  // Modal for resources 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
+  const openModal = (message) => {
+    setModalMessage(message);
+    setIsModalOpen(true);
+  };
+  const closeModal = () => setIsModalOpen(false);
   
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -50,7 +59,7 @@ function HeaderRegisterOut() {
     <>
       <nav className="bg-white border-b border-gray-200 dark:bg-gray-900 fixed w-full z-10 top-0 px-auto">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="/signin" className="flex items-center space-x-3 rtl:space-x-reverse pr-15 mr-2">
+          <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse pr-15 mr-2">
             <img src={logoImage} className="h-8 ml-0 lg:ml-10 xl:ml-10" alt="NiyogHub Logo" />
             <span className="text-black font-bold self-center text-xl font-semibold whitespace-nowrap dark:text-white ">
               NiyogHub
@@ -143,17 +152,57 @@ function HeaderRegisterOut() {
                 {isResourcesDropdownOpen && (
                   <ul className="flex flex-col z-50 mt-2 w-48 max-h-60 overflow-y-auto bg-white divide-y divide-gray-100 rounded-lg shadow-lg dark:bg-gray-700 absolute">
                     <li>
-                      <a href="/disease-identification" className="block px-4 py-2 text-sm text-gray-700 hover:text-[#537F19]">Disease Identification</a>
+                      <button
+                        onClick={() => openModal("To use the Disease Identification service, please log in first to NiyogHub.")}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:text-[#537F19]"
+                      >
+                        Disease Identification
+                      </button>
                     </li>
                     <li>
-                      <a href="/soil-profile" className="block px-4 py-2 text-sm text-gray-700 hover:text-[#537F19]">Soil Profile</a>
+                      <button
+                        onClick={() => openModal("To use the Soil Profile Service, please log in first to NiyogHub.")}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:text-[#537F19]"
+                      >
+                        Soil Profile
+                      </button>
                     </li>
                     <li>
-                      <a href="/chat-support" className="block px-4 py-2 text-sm text-gray-700 hover:text-[#537F19]">Chat Support</a>
+                      <button
+                        onClick={() => openModal("To use the Chat Support Service, please log in first to NiyogHub.")}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:text-[#537F19]"
+                      >
+                        Chat Support
+                      </button>
                     </li>
                   </ul>
                 )}
               </li>
+
+              {/* Popup Modal for Resources Services*/}
+              {isModalOpen && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+                  <div className="bg-white rounded-lg shadow-lg max-w-sm w-full p-6">
+                    <h2 className="text-lg font-semibold text-gray-800 mb-4">Please Log In</h2>
+                    <p className="text-gray-600 mb-6">{modalMessage}</p>
+                    <div className="flex justify-end space-x-4">
+                      <button
+                        onClick={closeModal}
+                        className="px-4 py-2 text-sm text-gray-600 border rounded hover:bg-gray-100"
+                      >
+                        Cancel
+                      </button>
+                      <a
+                        href="/signin"
+                        className="px-4 py-2 text-sm text-white bg-[#537F19] rounded hover:bg-[#3e6213]"
+                      >
+                        Log In
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               <li className={`relative md:hidden`}>
                 <button
                   type="button"
@@ -167,27 +216,24 @@ function HeaderRegisterOut() {
                 {isNestedDropdownOpen && (
                   <div className="z-10 ml-4 mt-2 w-50 max-h-60 overflow-y-auto origin-top-left bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
                     <div className="py-1" role="menu" aria-orientation="vertical">
-                      <a
-                        href="/disease-identification"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#537F19] hover:text-white"
-                        role="menuitem"
+                      <button
+                        onClick={() => openModal("To use the Disease Identification service, please log in first to NiyogHub.")}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:text-[#537F19]"
                       >
                         Disease Identification
-                      </a>
-                      <a
-                        href="/soil-profile"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#537F19] hover:text-white"
-                        role="menuitem"
+                      </button>
+                      <button
+                        onClick={() => openModal("To use the Soil Profile Service, please log in first to NiyogHub.")}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:text-[#537F19]"
                       >
                         Soil Profile
-                      </a>
-                      <a
-                        href="/chat-support"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#537F19] hover:text-white"
-                        role="menuitem"
+                      </button>
+                      <button
+                        onClick={() => openModal("To use the Chat Support Service, please log in first to NiyogHub.")}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:text-[#537F19]"
                       >
                         Chat Support
-                      </a>
+                      </button>
                     </div>
                   </div>
                 )}

@@ -1,15 +1,15 @@
-import GetStarted from "./GetStarted";
 import styles from "../../style";
-import Services from "./Services";
 import Sdg from "./SDG";
 import Announcement from "./Announcement";
 import NewsPrograms from "./NewsPrograms";
-import More from "./More";
+import MoreOut from "./MoreOut";
 import FooterFull from "../../components/Navbar/FooterFull";
 import Events from "./Events";
 import HeaderRegisterOut from "../../components/Navbar/HeaderRegisterOut";
+import ServicesOut from "./ServicesOut";
+import GetStartedOut from "./GetStartedOut";
 
-const Home = () => {
+const HomeOut = () => {
 
   return (
     <>
@@ -20,11 +20,11 @@ const Home = () => {
             
         <div className={`bg-primary ${styles.flexStart}`}>
           <div className={`${styles.boxWidth}`}>
-            <GetStarted/>
-            <Services/>
+            <GetStartedOut />
+            <ServicesOut />
             <Sdg/>
             <Announcement/>
-            <More/>
+            <MoreOut />
             <NewsPrograms/>
             <Events />
           </div>
@@ -37,4 +37,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeOut;

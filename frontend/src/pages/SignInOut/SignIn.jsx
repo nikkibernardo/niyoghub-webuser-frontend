@@ -7,7 +7,7 @@ const SignIn = () => {
   const navigate = useNavigate();
 
   const handleSignIn = () => {
-    navigate('/'); 
+    navigate('/home-registered'); 
   };
 
   return (

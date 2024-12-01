@@ -1,13 +1,15 @@
 import styles from "../style";
 import PropTypes from 'prop-types';
 import Footer from "../components/Navbar/Footer";
-import HeaderOut from "../components/Navbar/HeaderOut";
+// import HeaderOut from "../components/Navbar/HeaderOut";
+import HeaderRegisterOut from "../components/Navbar/HeaderRegisterOut";
 
 const LayoutOut = ({ children }) => {
   return (
     <div className="relative flex-1 overflow-y-auto overflow-hidden ">
         {/* HEADER */}
-        <HeaderOut/>
+        {/* <HeaderOut/> */}
+        <HeaderRegisterOut />
         
         {/* MAIN CONTENT */}
         <div className={`bg-primary ${styles.flexStart}`}>

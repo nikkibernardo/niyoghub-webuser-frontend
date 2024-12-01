@@ -1,8 +1,17 @@
 // import disease from "../../assets/disease.png";
 // import soil from "../../assets/soil.png";
 // import chat from "../../assets/chat.png";
+import { useState } from "react";
 
-const Services = () => {
+const ServicesOut = () => {
+  // Modal for resources 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
+  const openModal = (message) => {
+    setModalMessage(message);
+    setIsModalOpen(true);
+  };
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <>
@@ -13,8 +22,8 @@ const Services = () => {
           {/* services Button */}
           <div className="w-full flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 sm:space-x-4 mt-4 lg:px-10 mb-10">
             {/* Tree Disease Identification */}
-            <a
-              href="/disease-identification"
+            <button
+              onClick={() => openModal("To use the Disease Identification service, please log in first to NiyogHub.")}
               className="group flex flex-col sm:flex-row justify-center items-center border border-[#537F19] rounded-lg p-6 bg-white shadow hover:shadow-lg cursor-pointer transition-all w-[380px] h-[140px] hover:bg-gradient-to-r hover:from-[#578D10] hover:to-[#EACD40] hover:border-transparent text-center sm:text-left"
             >
               <div className="flex sm:flex-row flex-col items-center sm:items-start justify-center">
@@ -28,11 +37,11 @@ const Services = () => {
                   TREE DISEASE IDENTIFICATION
                 </p>
               </div>
-            </a>
+            </button>
 
             {/* Soil Profile */}
-            <a
-              href="/soil-profile"
+            <button
+              onClick={() => openModal("To use the Soil Profile Service, please log in first to NiyogHub.")}
               className="group flex items-center border border-[#537F19] rounded-lg p-6 bg-white shadow hover:shadow-lg cursor-pointer transition-all w-[380px] h-[140px] hover:bg-gradient-to-r hover:from-[#578D10] hover:to-[#EACD40] hover:border-transparent"
             >
               {/* Icon */}
@@ -49,11 +58,11 @@ const Services = () => {
                   SOIL PROFILE
                 </p>
               </div>
-            </a>
+            </button>
 
             {/* Real-Time Chat Support */}
-            <a
-              href="/chat-support"
+            <button
+              onClick={() => openModal("To use the Chat Support Service, please log in first to NiyogHub.")}
               className="group flex flex-col sm:flex-row justify-center items-center border border-[#537F19] rounded-lg p-6 bg-white shadow hover:shadow-lg cursor-pointer transition-all w-[380px] h-[140px] hover:bg-gradient-to-r hover:from-[#578D10] hover:to-[#EACD40] hover:border-transparent text-center sm:text-left"
             >
               <div className="flex sm:flex-row flex-col items-center sm:items-start justify-center">
@@ -67,7 +76,31 @@ const Services = () => {
                   REAL-TIME CHAT SUPPORT
                 </p>
               </div>
-            </a>
+            </button>
+
+            {/* Popup Modal for Resources Services*/}
+            {isModalOpen && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+                  <div className="bg-white rounded-lg shadow-lg max-w-sm w-full p-6">
+                    <h2 className="text-lg font-semibold text-gray-800 mb-4">Please Log In</h2>
+                    <p className="text-gray-600 mb-6">{modalMessage}</p>
+                    <div className="flex justify-end space-x-4">
+                      <button
+                        onClick={closeModal}
+                        className="px-4 py-2 text-sm text-gray-600 border rounded hover:bg-gray-100"
+                      >
+                        Cancel
+                      </button>
+                      <a
+                        href="/signin"
+                        className="px-4 py-2 text-sm text-white bg-[#537F19] rounded hover:bg-[#3e6213]"
+                      >
+                        Log In
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              )}
           </div>
 
         </div>
@@ -76,7 +109,7 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServicesOut;
 
 
 

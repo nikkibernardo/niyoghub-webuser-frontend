@@ -1,7 +1,7 @@
 import styles from "../../style";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const GetStarted = () => {
+const GetStartedOut = () => {
 
   return (
     <>
@@ -47,6 +47,6 @@ const GetStarted = () => {
   );
 };
 
-export default GetStarted;
+export default GetStartedOut;
 
 

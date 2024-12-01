@@ -81,7 +81,7 @@ function Header() {
     <>
       <nav className="bg-white border-b border-gray-200 dark:bg-gray-900 fixed w-full z-10 top-0 px-auto">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse pr-15 mr-2">
+          <a href="/home-registered" className="flex items-center space-x-3 rtl:space-x-reverse pr-15 mr-2">
             <img src={logoImage} className="h-8 ml-0 lg:ml-10 xl:ml-10" alt="NiyogHub Logo" />
             <span className="text-black font-bold self-center text-xl font-semibold whitespace-nowrap dark:text-white ">
               NiyogHub

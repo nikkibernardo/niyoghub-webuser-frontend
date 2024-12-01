@@ -1,12 +1,12 @@
-import Layout from "../../layout/Layout";
 import copraPriceImage from "../../assets/copraPrice.jpg";
 import { Box, Typography, Card, CardContent, TextField } from "@mui/material";
 import InfoIcon from "@mui/icons-material/Info"; 
+import LayoutRegisterOut from "../../layout/LayoutRegisterOut";
 
-const CopraPrice = () => {
+const CopraPriceOut = () => {
   return (
     <>
-    <Layout>
+    <LayoutRegisterOut>
       <Box
         sx={{
           display: "flex",
@@ -85,9 +85,9 @@ const CopraPrice = () => {
           </Box>
         </Box>
       </Box>
-    </Layout>
+    </LayoutRegisterOut>
     </>
   );
 };
 
-export default CopraPrice;
+export default CopraPriceOut;
