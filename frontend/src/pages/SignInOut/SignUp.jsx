@@ -19,7 +19,7 @@ const SignUp = () => {
     <>
       <LayoutOut>
         <section
-          id="sign-in"
+          id="sign-up"
           className={`flex md:flex-col flex-col`} 
           style={{ 
             backgroundImage: "url('src/assets/bck-opac.png')", 
