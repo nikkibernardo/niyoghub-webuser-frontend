@@ -1,8 +1,6 @@
-import Layout from "../../layout/Layout";
 import intercropping from "../../assets/intercropping.png";
 import ic1 from "../../assets/ic1.png";
 import ic2 from "../../assets/ic2.png";
-// import IntercropCarousel from "../../components/IntercropCarousel";
 import IntercropCarousel from "../../components/IntercropCarousel";
 import dykImg from "../../assets/dyk.png";
 import LayoutRegisterOut from "../../layout/LayoutRegisterOut";
@@ -13,37 +11,19 @@ const CoconutIntercroppingOut = () => {
     <LayoutRegisterOut>
       <div style={{ fontFamily: "Arial, sans-serif" }}>
         {/* Top Section with Background Image */}
-        <div style={{ position: "relative" }}>
+        <div className="relative w-full h-[150px] lg:h-[300px] md:h-[200px]">
           <img
             src={intercropping}
             alt="Coconut Intercropping"
-            style={{
-              width: "100%",
-              height: "200",
-              objectFit: "cover",
-              display: "block",
-            }}
+            className="w-full h-full object-cover"
           />
-          {/* Overlay Text on Image */}
-          <div
-            style={{
-              position: "absolute",
-              bottom: "48%",
-              left: "5%",
-              color: "white",
-              fontWeight: "bold",
-              fontSize: "4.3rem",
-              lineHeight: "1",
-            }}
-          >
-            COCONUT
-            <br />
-            INTERCROPPING
+          <div className="absolute bottom-4 left-4 text-white text-2xl font-extrabold md:text-3xl md:bottom-6 md:left-6 lg:text-4xl lg:bottom-8 lg:left-8">
+            COCONUT <br />INTERCROPPING
           </div>
         </div>
 
         {/* White Content Section */}
-        <div className="bg-white p-5 sm:px-14 lg:px-16 relative z-10 top-[-11.3%] rounded-t-3xl min-h-screen">
+        <div className="bg-white p-5 sm:px-14 lg:px-16 relative z-10 top-[-.6%] rounded-t-3xl min-h-screen">
           <h2 className="text-[#3C763D] text-3xl font-bold text-left mt-1 my-1">
             Coconut Based Farming Systems
           </h2>
@@ -139,6 +119,7 @@ const CoconutIntercroppingOut = () => {
         </div>
       </div>
     </LayoutRegisterOut>
+
     </>
   );
 };
